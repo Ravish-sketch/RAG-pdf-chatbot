@@ -1,6 +1,5 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.chains import create_retrieval_chain
-from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain.chains import RetrievalQA
 
 from utils.prompt import custom_prompt
 
@@ -11,14 +10,13 @@ def build_chain(db):
         temperature=0.3
     )
 
-    retriever = db.as_retriever(search_kwargs={"k": 4})
-
-    document_chain = create_stuff_documents_chain(
-        llm,
-        custom_prompt
+    qa_chain = RetrievalQA.from_chain_type(
+        llm=llm,
+        retriever=db.as_retriever(search_kwargs={"k": 4}),
+        chain_type="stuff",
+        chain_type_kwargs={
+            "prompt": custom_prompt
+        }
     )
 
-    return create_retrieval_chain(
-        retriever,
-        document_chain
-    )
+    return qa_chain

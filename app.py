@@ -182,11 +182,9 @@ else:
 
             with st.spinner("Thinking..."):
 
-                result = st.session_state.qa_chain.invoke({
-                    "input": user_input
-                })
+                result = st.session_state.qa_chain.invoke(user_input)
 
-                answer = result["answer"]
+                answer = result["result"]
 
                 st.markdown(answer)
 
