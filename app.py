@@ -24,7 +24,7 @@ except RuntimeError:
 # GOOGLE API KEY
 # =========================================================
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAfbDq8nfCTuEWkt1TGaqdvBr4yBgnfaVg"
+os.environ["GOOGLE_API_KEY"] = "YOUR_GEMINI_API_KEY"
 
 # =========================================================
 # PAGE CONFIG
