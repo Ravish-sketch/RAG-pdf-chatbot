@@ -10,6 +10,7 @@ from utils.embeddings import get_embeddings
 from utils.vector_store import create_vector_store
 from utils.qa_chain import build_chain
 
+
 # =========================================================
 # FIX EVENT LOOP (IMPORTANT FOR GEMINI + STREAMLIT)
 # =========================================================
@@ -24,7 +25,7 @@ except RuntimeError:
 # GOOGLE API KEY
 # =========================================================
 
-os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+os.environ["GOOGLE_API_KEY"] = "AIzaSyBYSWVJLE5J3vkIjvEQtaYq434ocS1y4QE"
 
 # =========================================================
 # PAGE CONFIG
@@ -182,11 +183,19 @@ else:
 
             with st.spinner("Thinking..."):
 
-                result = st.session_state.qa_chain.invoke({
-                    "query": user_input
-                })
 
-                answer = result["result"]
+                try:
+
+                    result = st.session_state.qa_chain.invoke({
+                        "query": user_input
+                    })
+
+                    answer = result["result"]
+
+                except Exception as e:
+
+                    answer = f"⚠️ Error: {str(e)}"
+
 
                 st.markdown(answer)
 
