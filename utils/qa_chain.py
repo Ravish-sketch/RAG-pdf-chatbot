@@ -7,7 +7,7 @@ from utils.prompt import custom_prompt
 def build_chain(db):
 
     llm = ChatGoogleGenerativeAI(
-        model="models/gemini-2.5-flash",
+        model="gemini-1.5-flash",
         temperature=0.3
     )
 
