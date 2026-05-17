@@ -25,7 +25,7 @@ except RuntimeError:
 # GOOGLE API KEY
 # =========================================================
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyBYSWVJLE5J3vkIjvEQtaYq434ocS1y4QE"
+os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
 # =========================================================
 # PAGE CONFIG
