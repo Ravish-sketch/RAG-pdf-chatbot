@@ -1,0 +1,11 @@
+streamlit
+langchain==0.1.16
+langchain-core==0.1.52
+langchain-community==0.0.34
+langchain-text-splitters
+faiss-cpu
+sentence-transformers
+transformers
+pypdf
+langchain-google-genai
+google-generativeai
