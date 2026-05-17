@@ -80,8 +80,6 @@ Gemini AI Response
 | HuggingFace | Text Embeddings |
 | Gemini API  | LLM Responses   |
 | PyPDF       | PDF Processing  |
-|
-
 ---
 
 # 📂 Project Structure
