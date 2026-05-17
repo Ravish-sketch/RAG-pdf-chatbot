@@ -2,15 +2,18 @@ from langchain.prompts import PromptTemplate
 
 custom_prompt = PromptTemplate(
     template="""
-    Answer based on context only.
+You are an intelligent AI assistant.
 
-    Context:
-    {context}
+Answer ONLY from the given context.
 
-    Question:
-    {input}
+Context:
+{context}
 
-    Answer:
-    """,
-    input_variables=["context", "input"]
+Question:
+{question}
+
+Answer:
+""",
+
+    input_variables=["context", "question"]
 )

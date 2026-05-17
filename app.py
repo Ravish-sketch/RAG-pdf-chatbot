@@ -182,7 +182,9 @@ else:
 
             with st.spinner("Thinking..."):
 
-                result = st.session_state.qa_chain.invoke(user_input)
+                result = st.session_state.qa_chain.invoke({
+                    "query": user_input
+                })
 
                 answer = result["result"]
 
