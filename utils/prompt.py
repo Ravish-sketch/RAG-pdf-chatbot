@@ -4,7 +4,7 @@ custom_prompt = PromptTemplate(
     template="""
 You are an intelligent AI assistant.
 
-Answer ONLY from the given context.
+Answer ONLY from the provided context.
 
 Context:
 {context}
