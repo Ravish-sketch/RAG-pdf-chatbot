@@ -1,46 +1,93 @@
 # 📄 AI PDF Chatbot (RAG + Gemini)
 
-An AI-powered PDF chatbot built using:
-
-- Streamlit
-- LangChain
-- FAISS
-- HuggingFace Embeddings
-- Google Gemini API
-
-This chatbot allows users to upload PDF files and ask questions about the content using Retrieval-Augmented Generation (RAG).
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/Streamlit-Deployed-red?style=for-the-badge&logo=streamlit">
+  <img src="https://img.shields.io/badge/LangChain-RAG-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Gemini-AI-orange?style=for-the-badge&logo=google">
+</p>
 
 ---
 
-# 🚀 Features
+# 🚀 Live Demo
+
+👉 **Try the App Here:**  
+## 🌐 https://rag-pdf-chatbot-gemini.streamlit.app
+
+---
+
+# 🖼️ Project Preview
+
+<img width="100%" src="assets/demo.png">
+
+---
+
+# 📌 About The Project
+
+AI PDF Chatbot is a powerful Retrieval-Augmented Generation (RAG) application that allows users to upload PDF files and ask questions directly from the document content.
+
+The application uses:
+
+- 📚 LangChain for RAG pipeline
+- 🧠 Google Gemini for AI responses
+- 🔍 FAISS for semantic vector search
+- 🤗 HuggingFace Embeddings
+- 🎨 Streamlit for modern UI
+
+---
+
+# ✨ Features
 
 ✅ Upload PDF files  
-✅ Chat-style interface  
-✅ Chat history  
+✅ Chat-style conversational UI  
+✅ AI-powered answers using Gemini  
 ✅ Semantic search with FAISS  
-✅ Gemini-powered responses  
-✅ Modular project structure  
 ✅ Fast document retrieval  
-✅ Streamlit UI  
+✅ Chat history support  
+✅ Modular clean architecture  
+✅ Error handling  
+✅ Streamlit cloud deployment  
+✅ RAG pipeline implementation  
 
 ---
+
+# 🧠 How RAG Works
+
+```text
+PDF Upload
+   ↓
+Text Extraction
+   ↓
+Text Chunking
+   ↓
+Embeddings Generation
+   ↓
+FAISS Vector Store
+   ↓
+Semantic Retrieval
+   ↓
+Gemini AI Response
+```
 
 # 🧠 Tech Stack
 
-| Technology | Usage |
-|---|---|
-| Streamlit | Frontend UI |
-| LangChain | RAG pipeline |
-| FAISS | Vector database |
-| HuggingFace | Embeddings |
-| Gemini API | LLM responses |
+| Technology  | Purpose         |
+| ----------- | --------------- |
+| Python      | Backend         |
+| Streamlit   | Frontend UI     |
+| LangChain   | RAG Pipeline    |
+| FAISS       | Vector Database |
+| HuggingFace | Text Embeddings |
+| Gemini API  | LLM Responses   |
+| PyPDF       | PDF Processing  |
+|
 
 ---
 
 # 📂 Project Structure
 
 ```bash
-pdf-chatbot/
+RAG-pdf-chatbot/
 │
 ├── app.py
 ├── requirements.txt
@@ -54,10 +101,10 @@ pdf-chatbot/
 │   ├── qa_chain.py
 │   └── prompt.py
 │
-├── data/
 ├── assets/
+├── data/
 ├── faiss_index/
-└── venv/
+└── .streamlit/
 ```
 
 ---
